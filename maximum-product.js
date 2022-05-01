@@ -1,14 +1,7 @@
 const getMaximumProduct = (products) => {
-  let maximumProducts = 0;
+  const uniqueSortedArray = products.sort((a, b) => b - a);
 
-  for (let i = 0; i < products.length; i++) {
-    for (let j = i + 1; j < products.length; j++) {
-      let maxDifference = (products[j] - 1) * (products[i] - 1);
-      if (maxDifference > maximumProducts) maximumProducts = maxDifference;
-    }
-  }
-
-  return maximumProducts;
+  return (uniqueSortedArray[0] - 1) * (uniqueSortedArray[1] - 1);
 };
 
-console.log(getMaximumProduct([7]));
+console.log(getMaximumProduct([10, 2, 5, 2]));
