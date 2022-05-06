@@ -1,10 +1,11 @@
-const climbStairs = (n) => {
-  let arr = [1, 2];
-
-  for (let i = 1; i < n; i++) {
-    arr[i + 1] = arr[i] + arr[i - 1];
+const climbStairs = (n, memo = []) => {
+  if (n <= 2) return n;
+  if (memo[n] !== undefined) {
+    return memo[n];
   }
-  return arr[n - 1];
+  let res = climbStairs(n - 1, memo) + climbStairs(n - 2, memo);
+  memo[n] = res;
+  return res;
 };
 
-console.log(climbStairs(5));
+console.log(climbStairs(45));
