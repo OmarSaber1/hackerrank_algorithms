@@ -12,4 +12,4 @@ const bestTimeToBuyStock = (arr) => {
 
   return maxProfit;
 };
-console.log(bestTimeToBuyStock([2, 4, 1]));
+console.log(bestTimeToBuyStock([7, 4, 8, 3, 6, 4]));
