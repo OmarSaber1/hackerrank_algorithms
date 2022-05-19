@@ -1,4 +1,5 @@
 const reverseLinkedList = (head) => {
+  if (!head) return head;
   let prev = null;
   let current = head;
   let next = current.next;
@@ -10,5 +11,5 @@ const reverseLinkedList = (head) => {
     next = current?.next;
   }
 
-  return head;
+  return prev;
 };
