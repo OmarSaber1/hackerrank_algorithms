@@ -1,4 +1,4 @@
-const x = (s1, s2) => {
+const blanagram = (s1, s2) => {
   const split1 = s1.split("");
   const split2 = s2.split("");
 
@@ -21,4 +21,4 @@ const x = (s1, s2) => {
   return false;
 };
 
-console.log(x("tangram", "anagram"));
+console.log(blanagram("tangram", "anagram"));
