@@ -66,6 +66,13 @@ console.log(minHeap.insert(2));
 console.log(minHeap.insert(3));
 console.log(minHeap.insert(4));
 console.log(minHeap.insert(1));
+console.log(minHeap.insert(5));
 
 console.log(minHeap.remove());
+console.log(minHeap);
+console.log(minHeap.remove());
+console.log(minHeap);
+console.log(minHeap.remove());
+console.log(minHeap.remove());
+
 console.log(minHeap);
