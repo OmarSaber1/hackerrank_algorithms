@@ -6,8 +6,5 @@ const find_Kth_smallest_number = function (nums, k) {
       heap[heap.indexOf(Math.max(...heap))] = nums[i];
     }
   }
-
-  console.log(heap);
-
   return heap.sort((a, b) => a - b)[k - 1];
 };
