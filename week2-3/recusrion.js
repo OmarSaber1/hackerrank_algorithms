@@ -9,4 +9,4 @@ const recusrion = (n) => {
   return recusrion(n - 1) + recusrion(n - 2);
 };
 
-console.log(recusrion(4));
+console.log(recusrion(20));
