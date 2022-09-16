@@ -3,9 +3,17 @@
  * @return {number}
  */
 var missingNumber = function (arr) {
-  const sortedArray = arr.sort((a, b) => a - b);
+  const res = Array(arr.length + 1).fill(-1);
 
-  for (let i = 0; i <= sortedArray.length; i++) {
-    if (sortedArray[i] !== i) return i;
+  for (var key of arr) {
+    res[key] = 0;
   }
+
+  return res.indexOf(-1);
+
+  //      const sortedArray = arr.sort((a, b) => a - b);
+
+  //   for (let i = 0; i <= sortedArray.length; i++) {
+  //     if (sortedArray[i] !== i) return i;
+  //   }
 };
