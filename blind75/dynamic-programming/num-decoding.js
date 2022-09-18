@@ -9,18 +9,16 @@ var numDecodings = function (s = "") {
     const twoDigit = Number(s.substring(i - 2, i));
 
     if (oneDigit >= 1) {
-      console.log(dp[i], dp[i - 1], dp[i - 2]);
       dp[i] += dp[i - 1];
     }
-
+    console.log(dp);
     if (twoDigit >= 10 && twoDigit <= 26) {
-      console.log(oneDigit, twoDigit);
       dp[i] += dp[i - 2];
     }
+    console.log(dp);
   }
 
-  console.log(dp);
   return dp[dp.length - 1];
 };
 
-console.log(numDecodings("12"));
+console.log(numDecodings("226"));
