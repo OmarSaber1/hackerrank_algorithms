@@ -10,7 +10,7 @@ const reorderList = (head) => {
   }
 
   const rightSection = reverseList(fast);
-  (slow = null), (leftSection = head);
+  (slow.next = null), (leftSection = head);
 
   while (leftSection && rightSection) {
     const leftNext = leftSection.next;
