@@ -8,7 +8,7 @@ function timePlanner(a, b, dur) {
 
     if (min + dur <= max) return min + dur;
 
-    if (a[left][1] < b[right][0]) {
+    if (a[left][1] < b[right][1]) {
       left++;
     } else {
       right++;
