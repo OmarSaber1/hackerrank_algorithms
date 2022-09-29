@@ -17,6 +17,7 @@ function buildTree(preOrder, inOrder) {
 
 buildTree((p = [3, 9, 20, 15, 7]), (n = [9, 3, 15, 20, 7]));
 
-3;
+//3;
 
-9;
+//9;
+//sasfas

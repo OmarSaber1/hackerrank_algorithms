@@ -7,7 +7,6 @@ var combinationSum4 = function (N, T) {
       if (num <= i) {
         dp[i] += dp[i - num];
       }
-      console.log(dp, { i }, { num });
     }
   }
 
