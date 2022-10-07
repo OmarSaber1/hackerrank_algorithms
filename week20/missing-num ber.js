@@ -3,21 +3,23 @@
  * @return {number[]}
  */
 var findErrorNums = function (nums) {
-  nums.sort((a, b) => a - b);
+  const hash = {};
+  const res = [];
 
-  let missing = null;
+  for (var key of nums) {
+    if (key in hash) {
+      res.push(key);
+    } else {
+      hash[key] = 1;
+    }
+  }
 
-  const set = [...new Set(nums)];
-
-  for (var i = 0; i < nums.length; i++) {
-    if (set[i] !== i + 1) {
-      missing = i + 1;
+  for (var i = 1; i <= nums.length; i++) {
+    if (!(i in hash)) {
+      res.push(i);
       break;
     }
   }
 
-  for (var i = 0; i < nums.length; i++) {
-    if (nums.indexOf(nums[i]) !== nums.lastIndexOf(nums[i]))
-      return [nums[i], missing];
-  }
+  return res;
 };
